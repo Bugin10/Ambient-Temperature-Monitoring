@@ -227,6 +227,7 @@ def print_time_selector(option):
 # and not an SQL injection
 def validate_input(option_str):
     # check that the option string represents a number
+    print """<h1>""" option_str """<h1>"""
     if option_str.isalnum():
         # check that the option is within a specific range
         if int(option_str) > 0 and int(option_str) <= 24:
