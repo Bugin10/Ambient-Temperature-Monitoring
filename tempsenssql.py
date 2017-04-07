@@ -31,8 +31,11 @@ for count in range(0,i):
    	# write the data to plotly
       	temps[count] = temp_C
 print(temps[0])
-HIn, TIn = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 17)
-HOu, TOu = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 27)
+HInL, TIn = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 17)
+HOuL, TOu = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 27)
+HIn = "%.1f" % HInL
+HOu = "%.1f" % HOuL
+
 curs.execute("INSERT INTO temps values(datetime('now','localtime'), (?), (?), (?), (?))", ( temps[0], temps[1], HIn, HOu,))
 conn.commit() 
 
