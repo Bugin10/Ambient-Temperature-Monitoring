@@ -99,7 +99,7 @@ def print_graph_script(table):
 # print the div that contains the graph
 def show_graph():
     print "<h2>Temperature Chart</h2>"
-    print '<div id="chart_div" style="width: 90%; height: 50%; display:block; margin:auto"></div>'
+    print '<div id="chart_div" style="width: 100%; height: 60%; display:block; margin:auto"></div>'
 
 
 
