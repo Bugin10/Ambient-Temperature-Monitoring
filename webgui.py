@@ -207,7 +207,7 @@ def print_time_selector(option):
         else:
             print "<option value=\"168\">the last 7 days</option>"
 
-         if option == "720":
+        if option == "720":
             print "<option value=\"720\" selected=\"selected\">the last month</option>"
         else:
             print "<option value=\"720\">the last month</option>"
