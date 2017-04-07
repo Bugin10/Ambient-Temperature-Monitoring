@@ -207,16 +207,16 @@ def print_time_selector(option):
         else:
             print "<option value=\"168\">the last 7 days</option>"
 
-        if option == "72":
-            print "<option value=\"72\" selected=\"selected\">the last month</option>"
+        if option == "720":
+            print "<option value=\"720\" selected=\"selected\">the last month</option>"
         else:
-            print "<option value=\"72\">the last month</option>"
+            print "<option value=\"720\">the last month</option>"
     else:
         print """<option value="6">the last 6 hours</option>
             <option value="12">the last 12 hours</option>
             <option value="24">the last 24 hours</option>
             <option value="168">the last 7 days</option>
-            <option value="72" selected="selected">the last month</option>"""
+            <option value="720" selected="selected">the last month</option>"""
 
     print """        </select>
         <input type="submit" value="Display">
@@ -229,7 +229,7 @@ def validate_input(option_str):
     # check that the option string represents a number
     if option_str.isalnum():
         # check that the option is within a specific range
-        if int(option_str) > 0 and int(option_str) <= 24:
+        if int(option_str) > 0 and int(option_str) <= 720:
             return option_str
         else:
             return None
